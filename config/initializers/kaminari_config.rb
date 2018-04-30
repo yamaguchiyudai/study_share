@@ -10,5 +10,5 @@ Kaminari.configure do |config|
   # config.param_name = :page
   # config.params_on_first_page = false
 
-  config.default_per_page = 5
+  config.default_per_page = 10
 end

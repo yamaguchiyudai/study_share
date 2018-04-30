@@ -10,6 +10,8 @@
     <title>Meshiterro</title>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="app/assets/stylesheet/post_images_header_category.css">
   </head> 
 
   <body>
@@ -19,7 +21,7 @@
         <div class="container relative">
           <div class="navbar-header">
             <a class="navbar-logo" href="/">
-              <%= image_tag('logo.png') %>
+              <%= image_tag('study_share_header.jpg') %>
             </a>
    
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -33,6 +35,17 @@
           <div id="slidemenu">
             <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
               <% if user_signed_in? %>
+                  <div class="header_category_div">
+                    <div class="header_category">subject</div>
+                    <li class="">
+                      <%= link_to '英語', category_index_English_path, class: "header_category_English" %>
+                      <%= link_to '数学', category_index_mathematics_path, class: "header_category_English" %>
+                      <%= link_to '国語', category_index_Japanese_path, class: "header_category_English" %>
+                      <%= link_to '理科', category_index_science_path, class: "header_category_English" %>
+                      <%= link_to '社会', category_index_social_study_path, class: "header_category_English" %>
+                    </li>
+                  </div>
+                
                 <li class="">
                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
                 </li>
@@ -69,7 +82,7 @@
               <br>
               善良な市民同士で無差別に食欲を煽るSNS
           </p>
-              <%= image_tag('logo-white.png') %>
+              <%= image_tag('study_share_footer_logo.jpg', :class => "no-margin-img") %>
               
             </div>
           </div>

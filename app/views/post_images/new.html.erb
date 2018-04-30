@@ -27,13 +27,23 @@
                   <%= f.attachment_field :image %>
                 </div>
               </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <h4>title</h4>
+                  <%= f.text_field :title %>
+                </div>
+              </div>
+
               <br>
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group has-icon">
-                    <label class="control-label sr-only">category</label>
-                    <%= f.text_field :category, class:"form-control", placeholder:"カテゴリー" %>
-                    <span class="fa fa-building form-control-icon" aria-hidden="true"></span>
+                    <%= f.label :"category" %>
+
+                    <%= f.select :category, [["英語","English"],["数学","mathematics"],["国語","Japanese"],["理科","science"],["社会","social_study"]] %>
+
+
                   </div>
                 </div>
                 <div class="col-sm-6">

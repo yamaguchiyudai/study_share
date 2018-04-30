@@ -13,12 +13,18 @@
         <h2 class="post-title"><%= @post_image.category %></h2>
         <ul class="meta-info-cells v4 float-wrapper">
         <li>
-        <i class="fa fa-user"></i>By<a href="#">
-           <%= @post_image.user.name %></a>
+        <i class="fa fa-user"></i>By
+
+            <%= link_to user_path(@post_image.user.id), method: :get do %>
+             <%= @post_image.user.name %>
+            <% end %>
+
         </li>
         <li>
           <i class="fa fa-calendar"></i><%= @post_image.created_at.strftime('%Y/%m/%d') %>
         </li>
+
+      <% if current_user.present? %>
 
         <% if @post_image.favorited_by?(current_user) %>
           <li>
@@ -35,6 +41,11 @@
             <% end %>
           </li>
         <% end %>
+      <% else %>
+
+      <% end %>
+
+
 
         <li>
           <i class="fa fa-comment"></i>
@@ -96,6 +107,12 @@
               </div>
               <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
           <% end %>
+
+          <!-- pay.jp導入 -->
+          <%= form_tag(action: :pay, method: :post) do %>
+            <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_abd99a04265e62770ac4a0a3"></script>
+          <% end %>
+          <!--  -->
 
         </div>
       </div>

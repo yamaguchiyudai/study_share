@@ -11,7 +11,9 @@ License URI: http://wrapbootstrap.com
 /* This is the place where you can override the default variables values. Check out the "Working with LESS variables" from the documentation to learn more*/
 /* GENERAL STYLING */
 .header {
-  position: relative;
+  position: fixed;
+  z-index: 100000;
+  width: 100%;
 }
 .header .navbar-header {
   padding: 0;
@@ -28,7 +30,7 @@ License URI: http://wrapbootstrap.com
   background-color: #232323;
 }
 .navbar-logo img{
-  margin-top: 10px;
+  height: 82px;
 }
 .navbar-main.navbar-shadow {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -1298,6 +1300,9 @@ fieldset[disabled] .navbar-main .btn-link:focus {
 .no-margin {
   margin: 0 !important;
 }
+.no-margin-img{
+  height: 82px;
+}
 .no-border {
   border: 0 !important;
 }
@@ -1742,7 +1747,7 @@ fieldset[disabled] .navbar-main .btn-link:focus {
 }
 /* SECTIONS */
 section.slice {
-  padding: 46px 0;
+  padding: 150px 0 0 0;
   position: relative;
   /*背景色追加*/
   background-color: #EAEBED;
@@ -11517,6 +11522,8 @@ body {
   margin-bottom: 50px;
   border: 1px solid #EFEFEF;
   background-color: #FFFFFF;
+  display: inline-block;
+  width: 45%;
 }
 .masonry-block .block-content{
   padding: 0 20px;
@@ -12702,4 +12709,10 @@ img.profile-img{
   font-weight: 500;
   color: #f2f1ef;
   margin-right: 5px;
+}
+
+.block-content p{
+  word-break: break-all;
+  height: 4rem;
+  overflow: hidden;
 }

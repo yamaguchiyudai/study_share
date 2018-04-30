@@ -1,0 +1,26 @@
+.header_category_div{
+	float: left;
+    height: 80px;
+    overflow: hidden;
+}
+.header_category{
+	margin: 30px;
+	text-align: right;
+}
+.header_category:hover{
+	background-color: #FBEFF2;
+
+}
+.header_category_div:hover{
+	background-color: #FAFAFA;
+	overflow: visible;
+	height: 200px;
+}
+.header_category_English{
+	margin: 30px;
+	width:100px;
+}
+.header_category_English:hover{
+	background-color: #FBEFF2;
+
+}

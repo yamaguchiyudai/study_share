@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+</head>
+<body>
+  
+
+
 <section class="sct-color-1 slice">
   <div class="container-fluid masonry-container">
     <div class="row">
@@ -13,11 +23,19 @@
                   </div>
                 </div>
                 <div class="block-content">
-                  <%= attachment_image_tag post_image.user, :profile_image, class: "img-circle pull-left profile-thumb" %>
+
          <%= link_to post_image_path(post_image.id) do %>
-                     <i class="fa fa-map-marker"></i><%= post_image.category %>
+
+                  <%= attachment_image_tag post_image.user, :profile_image, class: "img-circle pull-left profile-thumb" %>
+
+                  <h2>
+                  <%= post_image.title %>
+                  </h2>
          <% end %>
-                  </h3>
+                  
+
+
+                     <i class="fa fa-map-marker"></i><%= post_image.category %>
                   <p><%= post_image.caption %></p>
                   <ul class="inline-meta">
                     <li>By
@@ -31,9 +49,12 @@
               </div>
             </div>
           <% end %>
-          <%= paginate @post_images, class: "pagenate" %>
+          <%= paginate @post_images, class: "pagenate btn" %>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+</body>
+</html>
